@@ -1,0 +1,149 @@
+{
+    "81562848-a149-4228-ae85-125876e4c8e9": {
+        "nombre": "demo-test_20250327_140048",
+        "pid": 2738,
+        "inicio": "2025-03-27T14:00:48.966888",
+        "ruta_log": "data/logs/demo-test_20250327_140048.log",
+        "comando": [
+            "jmeter",
+            "-n",
+            "-t",
+            "data/scripts/demo-test_20250327_140048.jmx",
+            "-l",
+            "data/resultados/demo-test_20250327_140048.jtl",
+            "-e",
+            "-o",
+            "data/reportes/demo-test_20250327_140048",
+            "-Jthreads=10",
+            "-Jrampup=5",
+            "-Jduration=60"
+        ],
+        "estado": "finalizado"
+    },
+    "db8a3c6f-4f1c-4ba6-ab0f-e6a2d0a675fa": {
+        "nombre": "demo-test_20250327_140312",
+        "pid": 2811,
+        "inicio": "2025-03-27T14:03:12.166796",
+        "ruta_log": "data/logs/demo-test_20250327_140312.log",
+        "comando": [
+            "jmeter",
+            "-n",
+            "-t",
+            "data/scripts/demo-test_20250327_140312.jmx",
+            "-l",
+            "data/resultados/demo-test_20250327_140312.jtl",
+            "-e",
+            "-o",
+            "data/reportes/demo-test_20250327_140312",
+            "-Jthreads=5",
+            "-Jrampup=1",
+            "-Jduration=60"
+        ],
+        "estado": "finalizado"
+    },
+    "3d7c1903-0c05-4a68-a480-a5707f62ae13": {
+        "nombre": "demo-test_20250327_142744",
+        "pid": 2967,
+        "inicio": "2025-03-27T14:27:44.544642",
+        "ruta_log": "data/logs/demo-test_20250327_142744.log",
+        "comando": [
+            "jmeter",
+            "-n",
+            "-t",
+            "data/scripts/demo-test_20250327_142744.jmx",
+            "-l",
+            "data/resultados/demo-test_20250327_142744.jtl",
+            "-e",
+            "-o",
+            "data/reportes/demo-test_20250327_142744",
+            "-Jthreads=10",
+            "-Jrampup=5",
+            "-Jduration=60"
+        ],
+        "estado": "finalizado"
+    },
+    "65b3c0c6-f3c1-4f66-8a45-c07696cec189": {
+        "nombre": "demo-test_20250327_144756",
+        "pid": 3133,
+        "inicio": "2025-03-27T14:47:56.779988",
+        "ruta_log": "data/logs/demo-test_20250327_144756.log",
+        "comando": [
+            "jmeter",
+            "-n",
+            "-t",
+            "data/scripts/demo-test_20250327_144756.jmx",
+            "-l",
+            "data/resultados/demo-test_20250327_144756.jtl",
+            "-e",
+            "-o",
+            "data/reportes/demo-test_20250327_144756",
+            "-Jthreads=10",
+            "-Jrampup=5",
+            "-Jduration=60"
+        ],
+        "estado": "finalizado"
+    },
+    "8164cd4a-5c71-4a84-909c-36aed2bfa646": {
+        "nombre": "demo-test_20250327_144818",
+        "pid": 3199,
+        "inicio": "2025-03-27T14:48:18.415097",
+        "ruta_log": "data/logs/demo-test_20250327_144818.log",
+        "comando": [
+            "jmeter",
+            "-n",
+            "-t",
+            "data/scripts/demo-test_20250327_144818.jmx",
+            "-l",
+            "data/resultados/demo-test_20250327_144818.jtl",
+            "-e",
+            "-o",
+            "data/reportes/demo-test_20250327_144818",
+            "-Jthreads=10",
+            "-Jrampup=5",
+            "-Jduration=60"
+        ],
+        "estado": "finalizado"
+    },
+    "ddb40fa2-c106-49e3-ac40-97b72ea91c02": {
+        "nombre": "demo-test_20250327_144859",
+        "pid": 3268,
+        "inicio": "2025-03-27T14:48:59.260794",
+        "ruta_log": "data/logs/demo-test_20250327_144859.log",
+        "comando": [
+            "jmeter",
+            "-n",
+            "-t",
+            "data/scripts/demo-test_20250327_144859.jmx",
+            "-l",
+            "data/resultados/demo-test_20250327_144859.jtl",
+            "-e",
+            "-o",
+            "data/reportes/demo-test_20250327_144859",
+            "-Jthreads=10",
+            "-Jrampup=5",
+            "-Jduration=60"
+        ],
+        "estado": "finalizado"
+    },
+    "efb50084-ddb4-4b3c-8b3b-5dcf59585a05": {
+        "nombre": "demo-test_20250327_144945",
+        "pid": 3342,
+        "inicio": "2025-03-27T14:49:45.463196",
+        "ruta_log": "data/logs/demo-test_20250327_144945.log",
+        "comando": [
+            "jmeter",
+            "-n",
+            "-t",
+            "data/scripts/demo-test_20250327_144945.jmx",
+            "-l",
+            "data/resultados/demo-test_20250327_144945.jtl",
+            "-e",
+            "-o",
+            "data/reportes/demo-test_20250327_144945",
+            "-Jthreads=5",
+            "-Jrampup=5",
+            "-Jduration=120"
+        ],
+        "estado": "finalizado"
+    }
+}

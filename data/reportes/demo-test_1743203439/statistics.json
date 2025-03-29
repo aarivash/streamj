@@ -1,0 +1,34 @@
+{
+  "Google" : {
+    "transaction" : "Google",
+    "sampleCount" : 1565,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 382.09712460063895,
+    "medianResTime" : 382.0,
+    "minResTime" : 225.0,
+    "maxResTime" : 872.0,
+    "pct1ResTime" : 499.0,
+    "pct2ResTime" : 514.0,
+    "pct3ResTime" : 527.0,
+    "throughput" : 13.037103680378534,
+    "receivedKBytesPerSec" : 11.165566335636694,
+    "sentKBytesPerSec" : 1.4259332150414021
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 1565,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 382.09712460063895,
+    "medianResTime" : 382.0,
+    "minResTime" : 225.0,
+    "maxResTime" : 872.0,
+    "pct1ResTime" : 499.0,
+    "pct2ResTime" : 514.0,
+    "pct3ResTime" : 527.0,
+    "throughput" : 13.037103680378534,
+    "receivedKBytesPerSec" : 11.165566335636694,
+    "sentKBytesPerSec" : 1.4259332150414021
+  }
+}

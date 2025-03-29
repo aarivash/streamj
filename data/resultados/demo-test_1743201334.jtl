@@ -1,0 +1,11 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1743201336466,701,Google,200,OK,Usuarios 1-1,text,true,,18007,112,9,9,https://www.google.com/,678,0,586
+1743201336805,362,Google,200,OK,Usuarios 1-6,text,true,,17964,112,9,9,https://www.google.com/,336,0,255
+1743201336702,463,Google,200,OK,Usuarios 1-5,text,true,,17918,112,9,9,https://www.google.com/,421,0,349
+1743201336903,261,Google,200,OK,Usuarios 1-7,text,true,,17982,112,9,9,https://www.google.com/,221,0,153
+1743201336464,705,Google,200,OK,Usuarios 1-2,text,true,,17961,112,9,9,https://www.google.com/,658,0,583
+1743201337002,167,Google,200,OK,Usuarios 1-8,text,true,,18013,112,9,9,https://www.google.com/,120,0,63
+1743201336504,660,Google,200,OK,Usuarios 1-3,text,true,,17996,112,9,9,https://www.google.com/,618,0,568
+1743201336603,569,Google,200,OK,Usuarios 1-4,text,true,,18044,112,9,9,https://www.google.com/,516,0,465
+1743201337103,104,Google,200,OK,Usuarios 1-9,text,true,,17935,112,2,2,https://www.google.com/,100,0,54
+1743201337201,86,Google,200,OK,Usuarios 1-10,text,true,,18015,112,1,1,https://www.google.com/,82,0,30

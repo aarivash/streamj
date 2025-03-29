@@ -1,0 +1,152 @@
+2025-03-29 17:12:55,752 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-03-29 17:12:55,783 INFO o.a.j.JMeter: Loading user properties from: /opt/jmeter/bin/user.properties
+2025-03-29 17:12:55,784 INFO o.a.j.JMeter: Loading system properties from: /opt/jmeter/bin/system.properties
+2025-03-29 17:12:55,785 INFO o.a.j.JMeter: Setting JMeter property: threads=5
+2025-03-29 17:12:55,785 INFO o.a.j.JMeter: Setting JMeter property: rampup=1
+2025-03-29 17:12:55,786 INFO o.a.j.JMeter: Setting JMeter property: duration=30
+2025-03-29 17:12:55,799 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-03-29 17:12:55,800 INFO o.a.j.JMeter: Version 5.6.3
+2025-03-29 17:12:55,800 INFO o.a.j.JMeter: java.version=17.0.14
+2025-03-29 17:12:55,801 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-03-29 17:12:55,801 INFO o.a.j.JMeter: os.name=Linux
+2025-03-29 17:12:55,801 INFO o.a.j.JMeter: os.arch=amd64
+2025-03-29 17:12:55,802 INFO o.a.j.JMeter: os.version=5.15.0-134-generic
+2025-03-29 17:12:55,802 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-03-29 17:12:55,803 INFO o.a.j.JMeter: java.awt.headless=true
+2025-03-29 17:12:55,803 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-03-29 17:12:55,803 INFO o.a.j.JMeter: Available Processors =2
+2025-03-29 17:12:55,814 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-03-29 17:12:55,815 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-03-29 17:12:55,815 INFO o.a.j.JMeter: JMeterHome=/opt/jmeter
+2025-03-29 17:12:55,816 INFO o.a.j.JMeter: user.dir  =/root/streamj
+2025-03-29 17:12:55,816 INFO o.a.j.JMeter: PWD       =/root/streamj
+2025-03-29 17:12:55,817 INFO o.a.j.JMeter: IP: 127.0.1.1 Name: ubuntu FullName: ubuntu
+2025-03-29 17:12:55,833 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'/root/streamj/data/reportes/demo-test_1743279174'
+2025-03-29 17:12:55,837 INFO o.a.j.s.FileServer: Default base='/root/streamj'
+2025-03-29 17:12:55,839 INFO o.a.j.s.FileServer: Set new base='/root/streamj/data/jmx'
+2025-03-29 17:12:56,105 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-03-29 17:12:56,151 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-03-29 17:12:56,159 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-03-29 17:12:56,172 INFO o.a.j.s.SaveService: Loading file: data/jmx/demo-test_1743279174.jmx
+2025-03-29 17:12:56,297 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-03-29 17:12:56,297 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-03-29 17:12:56,298 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-03-29 17:12:56,299 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-03-29 17:12:56,299 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-03-29 17:12:56,300 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-03-29 17:12:56,312 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-03-29 17:12:56,327 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2025-03-29 17:12:56,327 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: data/resultados/demo-test_1743279174.jtl
+2025-03-29 17:12:56,328 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: /opt/jmeter/bin/reportgenerator.properties
+2025-03-29 17:12:56,329 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2025-03-29 17:12:56,334 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2025-03-29 17:12:56,339 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2025-03-29 17:12:56,340 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2025-03-29 17:12:56,340 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2025-03-29 17:12:56,341 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2025-03-29 17:12:56,341 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2025-03-29 17:12:56,341 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2025-03-29 17:12:56,342 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2025-03-29 17:12:56,343 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2025-03-29 17:12:56,347 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2025-03-29 17:12:56,348 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-03-29 17:12:56,348 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2025-03-29 17:12:56,349 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2025-03-29 17:12:56,349 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2025-03-29 17:12:56,350 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2025-03-29 17:12:56,350 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-03-29 17:12:56,350 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-03-29 17:12:56,351 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-03-29 17:12:56,351 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-03-29 17:12:56,353 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2025-03-29 17:12:56,353 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2025-03-29 17:12:56,353 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2025-03-29 17:12:56,355 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2025-03-29 17:12:56,355 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2025-03-29 17:12:56,355 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2025-03-29 17:12:56,380 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-03-29 17:12:56,382 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-03-29 17:12:56,382 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-03-29 17:12:56,390 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-03-29 17:12:56,391 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-03-29 17:12:56,489 INFO o.a.j.JMeter: Running test (1743279176489)
+2025-03-29 17:12:56,552 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Usuarios
+2025-03-29 17:12:56,552 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group Usuarios.
+2025-03-29 17:12:56,552 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-03-29 17:12:56,553 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=1 delayedStart=false
+2025-03-29 17:12:56,564 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-03-29 17:12:56,564 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-03-29 17:12:56,564 INFO o.a.j.t.JMeterThread: Thread started: Usuarios 1-1
+2025-03-29 17:12:56,593 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = ubuntu
+2025-03-29 17:12:56,602 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-03-29 17:12:56,604 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-03-29 17:12:56,604 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-03-29 17:12:56,605 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-03-29 17:12:56,605 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-03-29 17:12:56,734 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2025-03-29 17:12:56,745 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2025-03-29 17:12:56,746 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2025-03-29 17:12:56,758 INFO o.a.j.t.JMeterThread: Thread started: Usuarios 1-2
+2025-03-29 17:12:56,855 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2025-03-29 17:12:56,859 INFO o.a.j.u.SSLManager: KeyStore created OK
+2025-03-29 17:12:56,860 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2025-03-29 17:12:56,957 INFO o.a.j.t.JMeterThread: Thread started: Usuarios 1-3
+2025-03-29 17:12:57,158 INFO o.a.j.t.JMeterThread: Thread started: Usuarios 1-4
+2025-03-29 17:12:57,357 INFO o.a.j.t.JMeterThread: Thread started: Usuarios 1-5
+2025-03-29 17:13:00,099 INFO o.a.j.r.Summariser: summary +     33 in 00:00:04 =    9.1/s Avg:   443 Min:   239 Max:   859 Err:     0 (0.00%) Active: 5 Started: 5 Finished: 0
+2025-03-29 17:13:26,707 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Usuarios 1-1
+2025-03-29 17:13:26,708 INFO o.a.j.t.JMeterThread: Thread finished: Usuarios 1-1
+2025-03-29 17:13:26,708 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Usuarios 1-3
+2025-03-29 17:13:26,712 INFO o.a.j.t.JMeterThread: Thread finished: Usuarios 1-3
+2025-03-29 17:13:26,761 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Usuarios 1-5
+2025-03-29 17:13:26,761 INFO o.a.j.t.JMeterThread: Thread finished: Usuarios 1-5
+2025-03-29 17:13:26,790 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Usuarios 1-2
+2025-03-29 17:13:26,791 INFO o.a.j.t.JMeterThread: Thread finished: Usuarios 1-2
+2025-03-29 17:13:26,808 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Usuarios 1-4
+2025-03-29 17:13:26,808 INFO o.a.j.t.JMeterThread: Thread finished: Usuarios 1-4
+2025-03-29 17:13:26,808 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-03-29 17:13:26,809 INFO o.a.j.r.Summariser: summary +    356 in 00:00:27 =   13.3/s Avg:   376 Min:   228 Max:   529 Err:     0 (0.00%) Active: 0 Started: 5 Finished: 5
+2025-03-29 17:13:26,810 INFO o.a.j.r.Summariser: summary =    389 in 00:00:30 =   12.8/s Avg:   381 Min:   228 Max:   859 Err:     0 (0.00%)
+2025-03-29 17:13:26,811 INFO o.a.j.JMeter: Generating Dashboard
+2025-03-29 17:13:26,811 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2025-03-29 17:13:26,823 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2025-03-29 17:13:26,968 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2025-03-29 17:13:26,969 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2025-03-29 17:13:26,971 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2025-03-29 17:13:26,972 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2025-03-29 17:13:26,976 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2025-03-29 17:13:26,982 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2025-03-29 17:13:26,983 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2025-03-29 17:13:26,983 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2025-03-29 17:13:27,008 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2025-03-29 17:13:27,009 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2025-03-29 17:13:27,010 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2025-03-29 17:13:27,010 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2025-03-29 17:13:27,022 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2025-03-29 17:13:27,023 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 2723 samples
+2025-03-29 17:13:27,023 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2025-03-29 17:13:27,023 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2025-03-29 17:13:27,024 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2025-03-29 17:13:27,024 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2025-03-29 17:13:27,024 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2025-03-29 17:13:27,024 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2025-03-29 17:13:27,027 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2025-03-29 17:13:27,028 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2025-03-29 17:13:27,028 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2025-03-29 17:13:27,028 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2025-03-29 17:13:27,028 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 5835 samples
+2025-03-29 17:13:27,029 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 1167 samples
+2025-03-29 17:13:27,029 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 389 samples
+2025-03-29 17:13:27,030 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 389 samples produced in 179ms on channel 0
+2025-03-29 17:13:27,030 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2025-03-29 17:13:27,131 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2025-03-29 17:13:27,131 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2025-03-29 17:13:27,132 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2025-03-29 17:13:27,133 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2025-03-29 17:13:27,134 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to /root/streamj/data/reportes/demo-test_1743279174/statistics.json
+2025-03-29 17:13:27,196 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2025-03-29 17:13:27,200 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: /root/streamj/data/reportes/demo-test_1743279174
+2025-03-29 17:13:27,405 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: /root/streamj/data/reportes/demo-test_1743279174, creating folder structure
+2025-03-29 17:13:27,408 INFO o.a.j.r.d.TemplateVisitor: Copying folder from '/opt/jmeter/bin/report-template' to '/root/streamj/data/reportes/demo-test_1743279174', got message: /root/streamj/data/reportes/demo-test_1743279174, found non empty folder with following content [/root/streamj/data/reportes/demo-test_1743279174/statistics.json], will be ignored
+2025-03-29 17:13:27,740 INFO o.a.j.JMeter: Dashboard generated
+... end of run
