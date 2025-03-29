@@ -5,14 +5,26 @@ from datetime import datetime
 from streamlit_autorefresh import st_autorefresh
 from jmeter_runner import ejecutar_prueba_jmeter
 from execution_manager import agregar_ejecucion, get_ejecuciones_activas
+from shared.session_manager import validar_sesion, obtener_usuario_actual, cerrar_sesion
 
+# 🛡️ Validar sesión antes de continuar
+validar_sesion()
+
+# ✅ Configuración de la página
 st.set_page_config(page_title="Ejecución de Pruebas", layout="wide")
 st.title("🚀 Nueva prueba")
+
+# 👤 Mostrar usuario actual y botón de logout arriba a la derecha
+with st.sidebar:
+    st.markdown("### 👤 Usuario conectado")
+    st.info(obtener_usuario_actual())
+    if st.button("Cerrar sesión 🚪"):
+        cerrar_sesion()
 
 # 🌀 Auto refresco cada 3 segundos
 st_autorefresh(interval=3000, key="auto_refresh")
 
-# Formulario para subir prueba
+# 📤 Formulario para subir .jmx
 with st.form("form_ejecucion"):
     st.subheader("📤 Sube archivo .jmx")
     archivo = st.file_uploader("Archivo JMX", type="jmx")
@@ -31,11 +43,14 @@ with st.form("form_ejecucion"):
         with open(ruta_jmx, "wb") as f:
             f.write(archivo.read())
 
-        agregar_ejecucion(nombre_archivo, hilos, ramp_up, duracion, comentario, timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+        agregar_ejecucion(
+            nombre_archivo, hilos, ramp_up, duracion, comentario,
+            timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        )
         ejecutar_prueba_jmeter(nombre_archivo, hilos, ramp_up, duracion, comentario, report_path)
         st.success("✅ Prueba iniciada correctamente.")
 
-# Estado de ejecuciones en curso
+# 📊 Estado de ejecuciones activas
 st.subheader("📊 Estado de ejecuciones")
 ejecuciones = get_ejecuciones_activas()
 
@@ -46,7 +61,6 @@ else:
         if isinstance(ejec, dict):
             with st.expander(f"🧪 {ejec['nombre_archivo']} — {ejec['estado']}"):
                 log_path = f"data/logs/{ejec['nombre_archivo']}.log"
-
                 if os.path.exists(log_path):
                     with open(log_path, "r") as f:
                         log_content = f.read()

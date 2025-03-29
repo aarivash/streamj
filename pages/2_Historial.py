@@ -1,8 +1,13 @@
 import streamlit as st
+st.set_page_config(page_title="Historial de Pruebas", layout="wide")
+
 import pandas as pd
 from database import cargar_historial
+from shared.session_manager import validar_sesion, mostrar_sidebar_usuario
 
-st.set_page_config(page_title="Historial de Pruebas", layout="wide")
+validar_sesion()
+mostrar_sidebar_usuario()
+
 st.title("📈 Historial de Ejecuciones")
 
 # Cargar historial desde la base de datos
@@ -37,3 +42,7 @@ if datos:
     )
 else:
     st.info("🛈 Aún no hay pruebas registradas en el historial.")
+
+#if st.button("Cerrar sesión"):
+#    cerrar_sesion()
+    st.rerun()

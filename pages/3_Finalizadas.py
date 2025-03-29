@@ -1,9 +1,13 @@
 import streamlit as st
+st.set_page_config(page_title="Pruebas Finalizadas", layout="wide")
+
 import pandas as pd
 from database import cargar_finalizadas
 from pytz import timezone
+from shared.session_manager import validar_sesion, mostrar_sidebar_usuario
 
-st.set_page_config(page_title="Pruebas Finalizadas", layout="wide")
+validar_sesion()
+mostrar_sidebar_usuario()
 
 st.title("✅ Pruebas Finalizadas")
 
@@ -36,3 +40,7 @@ if not datos.empty:
     )
 else:
     st.warning("No hay pruebas finalizadas o no se pudo cargar la información.")
+
+#if st.button("Cerrar sesión"):
+#    cerrar_sesion()
+    st.rerun()

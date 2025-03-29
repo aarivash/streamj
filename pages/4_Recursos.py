@@ -1,8 +1,14 @@
 import streamlit as st
+st.set_page_config(page_title="Recursos del Sistema", layout="wide")
+
 import psutil
 from streamlit_autorefresh import st_autorefresh
+from shared.session_manager import validar_sesion, mostrar_sidebar_usuario
 
-st.set_page_config(page_title="Recursos del Sistema", layout="wide")
+validar_sesion()
+mostrar_sidebar_usuario()
+
+
 st.title("🖥️ Monitor de Recursos del Sistema")
 st.markdown("Visualiza el uso actual de recursos en tu máquina (actualización cada 5 segundos).")
 st.divider()
@@ -29,3 +35,7 @@ st.write(f"🔼 Enviado: {round(net.bytes_sent / 1024**2, 2)} MB")
 st.write(f"🔽 Recibido: {round(net.bytes_recv / 1024**2, 2)} MB")
 
 st.caption("♻️ Actualización automática cada 5 segundos.")
+
+#if st.button("Cerrar sesión"):
+#    cerrar_sesion()
+st.rerun()
