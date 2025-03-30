@@ -101,3 +101,11 @@ if __name__ == "__main__":
     crear_tabla_usuarios()
     crear_tabla_accesos()
     print("✅ Tablas creadas/verificadas")
+    
+def obtener_grupos_existentes():
+    conn = sqlite3.connect(DB_PATH)
+    c = conn.cursor()
+    c.execute("SELECT DISTINCT grupo FROM usuarios WHERE grupo IS NOT NULL AND grupo != ''")
+    grupos = [row[0] for row in c.fetchall()]
+    conn.close()
+    return grupos
