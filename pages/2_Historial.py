@@ -1,48 +1,86 @@
 import streamlit as st
-st.set_page_config(page_title="Historial de Pruebas", layout="wide")
-
+import sqlite3
 import pandas as pd
-from database import cargar_historial
-from shared.session_manager import validar_sesion, mostrar_sidebar_usuario
+from shared.session_manager import validar_sesion, obtener_usuario_actual, cerrar_sesion
+from auth_manager import obtener_rol_usuario, obtener_grupo_usuario
+from shared.session_manager import mostrar_sidebar_usuario
 
+
+# =========================
+# 🔐 Validación de sesión
+# =========================
 validar_sesion()
+usuario = obtener_usuario_actual()
+rol = obtener_rol_usuario(usuario)
+grupo = obtener_grupo_usuario(usuario)
+
+# =========================
+# 🎨 Configuración de página
+# =========================
+st.set_page_config(page_title="Historial de Pruebas", layout="wide")
+st.title("📜 Historial de Ejecuciones")
+
+# =========================
+# 👤 Usuario conectado (sidebar)
+# =========================
 mostrar_sidebar_usuario()
 
-st.title("📈 Historial de Ejecuciones")
 
-# Cargar historial desde la base de datos
-datos = cargar_historial()
+# =========================
+# 🔍 Obtener historial con visibilidad según rol/grupo
+# =========================
+def obtener_historial(usuario, grupo, rol):
+    conn = sqlite3.connect("data/ejecuciones.db")
+    c = conn.cursor()
 
-# Convertir a DataFrame y manejar fechas
-if datos:
-    df = pd.DataFrame(datos)
-    
-    if not pd.api.types.is_datetime64_any_dtype(df["fecha"]):
-        df["fecha"] = pd.to_datetime(df["fecha"], errors="coerce")
+    if rol == "admin":
+        c.execute("SELECT * FROM ejecuciones ORDER BY timestamp DESC")
+        resultados = c.fetchall()
+        conn.close()
+        return resultados
 
-    # Filtros
-    with st.expander("🔍 Filtrar historial"):
-        col1, col2 = st.columns(2)
-        test_name = col1.text_input("🔤 Filtrar por nombre del test:")
-        fecha_desde = col2.date_input("📅 Desde:", value=df["fecha"].min().date())
-        fecha_hasta = col2.date_input("📅 Hasta:", value=df["fecha"].max().date())
+    elif grupo:
+        # Obtener los usuarios del grupo desde auth.db
+        conn_auth = sqlite3.connect("data/auth.db")
+        c_auth = conn_auth.cursor()
+        c_auth.execute("SELECT username FROM usuarios WHERE grupo = ?", (grupo,))
+        usuarios_del_grupo = [row[0] for row in c_auth.fetchall()]
+        conn_auth.close()
 
-        df = df[
-            (df["fecha"].dt.date >= fecha_desde) &
-            (df["fecha"].dt.date <= fecha_hasta)
-        ]
-        if test_name:
-            df = df[df["nombre_archivo"].str.contains(test_name, case=False, na=False)]
+        if usuarios_del_grupo:
+            placeholders = ",".join("?" * len(usuarios_del_grupo))
+            query = f"""
+                SELECT * FROM ejecuciones
+                WHERE usuario IN ({placeholders})
+                ORDER BY timestamp DESC
+            """
+            c.execute(query, usuarios_del_grupo)
+            resultados = c.fetchall()
+            conn.close()
+            return resultados
+        else:
+            conn.close()
+            return []
 
-    # Mostrar resultados
-    st.dataframe(
-        df.sort_values(by="fecha", ascending=False).reset_index(drop=True),
-        use_container_width=True,
-        hide_index=True
-    )
+    else:
+        c.execute("""
+            SELECT * FROM ejecuciones 
+            WHERE usuario = ?
+            ORDER BY timestamp DESC
+        """, (usuario,))
+        resultados = c.fetchall()
+        conn.close()
+        return resultados
+
+# =========================
+# 📊 Mostrar los resultados
+# =========================
+historial = obtener_historial(usuario, grupo, rol)
+
+if not historial:
+    st.warning("No hay ejecuciones registradas aún.")
 else:
-    st.info("🛈 Aún no hay pruebas registradas en el historial.")
-
-#if st.button("Cerrar sesión"):
-#    cerrar_sesion()
-    st.rerun()
+    df = pd.DataFrame(historial, columns=[
+        "ID", "Archivo", "Hilos", "Ramp-Up", "Duración", "Comentario", "Usuario", "Fecha", "Estado"
+    ])
+    st.dataframe(df, use_container_width=True)

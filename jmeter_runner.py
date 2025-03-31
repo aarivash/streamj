@@ -1,6 +1,5 @@
 import subprocess
 import os
-import time
 import threading
 from database import guardar_resultado
 from execution_manager import actualizar_estado
@@ -8,11 +7,17 @@ from execution_manager import actualizar_estado
 def ejecutar_prueba_jmeter(nombre_archivo, hilos, ramp_up, duracion, comentario, report_path):
     def hilo():
         try:
+            # Rutas necesarias
             ruta_jmx = f"data/jmx/{nombre_archivo}.jmx"
             resultado_jtl = f"data/resultados/{nombre_archivo}.jtl"
             log_path = f"data/logs/{nombre_archivo}.log"
-            os.makedirs("data/logs", exist_ok=True)
 
+            # Asegurar carpetas
+            os.makedirs("data/logs", exist_ok=True)
+            os.makedirs("data/resultados", exist_ok=True)
+            os.makedirs(report_path, exist_ok=True)
+
+            # Comando de ejecución
             comando = [
                 "jmeter",
                 "-n",
@@ -26,10 +31,11 @@ def ejecutar_prueba_jmeter(nombre_archivo, hilos, ramp_up, duracion, comentario,
                 f"-Jduration={duracion}"
             ]
 
-            # Registrar el comando al log
+            # Registrar comando en log
             with open(log_path, "w") as log_file:
                 log_file.write(f"[COMANDO] {' '.join(comando)}\n\n")
 
+            # Ejecutar JMeter
             proceso = subprocess.Popen(
                 comando,
                 stdout=subprocess.PIPE,
@@ -44,12 +50,14 @@ def ejecutar_prueba_jmeter(nombre_archivo, hilos, ramp_up, duracion, comentario,
 
             proceso.wait()
 
+            # Procesar resultados
             total_requests, errores, promedio = procesar_jtl(resultado_jtl)
             error_pct = round((errores / total_requests) * 100, 2) if total_requests else 0
             resumen = f"{total_requests} requests | {errores} errores | {error_pct}% error | Promedio: {promedio} ms"
 
             estado = "✅ Éxito" if proceso.returncode == 0 else "❌ Falló"
 
+            # Guardar en base de datos
             guardar_resultado(
                 nombre=nombre_archivo,
                 hilos=hilos,
@@ -66,6 +74,7 @@ def ejecutar_prueba_jmeter(nombre_archivo, hilos, ramp_up, duracion, comentario,
                 report_path=report_path
             )
 
+            # Actualizar estado en la ejecución activa
             actualizar_estado(nombre_archivo, estado)
 
         except Exception as e:
@@ -74,7 +83,8 @@ def ejecutar_prueba_jmeter(nombre_archivo, hilos, ramp_up, duracion, comentario,
                 log_file.write(f"[ERROR] {str(e)}\n")
             print(f"[ERROR] Fallo en ejecución de {nombre_archivo}: {e}")
 
-    threading.Thread(target=hilo).start()
+    # Iniciar en hilo aparte
+    threading.Thread(target=hilo, daemon=True).start()
 
 def procesar_jtl(jtl_path):
     try:

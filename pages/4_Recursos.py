@@ -4,6 +4,8 @@ st.set_page_config(page_title="Recursos del Sistema", layout="wide")
 import psutil
 from streamlit_autorefresh import st_autorefresh
 from shared.session_manager import validar_sesion, mostrar_sidebar_usuario
+from shared.session_manager import mostrar_sidebar_usuario
+
 
 validar_sesion()
 mostrar_sidebar_usuario()
